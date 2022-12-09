@@ -4,11 +4,9 @@ import random
 import string
 
 app = Flask(__name__)
-rand_string = 'aaaaaa'
-def word():
-    letters, length = string.ascii_lowercase, 6
-    rand_string = ''.join(random.choice(letters) for i in range(length))
-    return rand_string
+
+letters, length = string.ascii_lowercase, 6
+rand_string = ''.join(random.choice(letters) for i in range(length))
 
 
 @app.route('/')
